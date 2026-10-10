@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #20243a;
+  background: #f5f6fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.app {
+  max-width: 1440px;
+  margin: auto;
+  padding: 28px 6%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e4e6ef;
+}
+
+.brand {
+  font-family: 'Manrope', sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.brand span {
+  color: #7160e8;
+}
+
+.header > p,
+.eyebrow {
+  color: #777b91;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 38px 0;
+  padding: 48px;
+  color: white;
+  border-radius: 25px;
+  background: linear-gradient(120deg, #5145cd, #8979f4);
+  box-shadow: 0 16px 35px #6556dc25;
+}
+
+.hero .eyebrow {
+  color: #e1dcff;
+}
+
+.hero h1 {
+  margin: 16px 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(32px, 5vw, 51px);
+  line-height: 1.14;
+  letter-spacing: -2px;
+}
+
+.subtitle {
+  color: #efedff;
+  line-height: 1.7;
+}
+
+.hero-icon {
+  font-size: clamp(65px, 10vw, 115px);
+  background: #ffffff20;
+  padding: 28px;
+  border-radius: 28px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  align-items: start;
+  gap: 28px;
+}
+
+.form-panel,
+.contacts-panel {
+  min-width: 0;
+  padding: 26px;
+  background: white;
+  border: 1px solid #e9eaf2;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px #24234d08;
+}
+
+h2 {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  font-size: 21px;
+  letter-spacing: -0.6px;
+}
+
+.muted {
+  color: #888ba0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  gap: 9px;
+}
+
+form label {
+  margin-top: 8px;
+  color: #41445a;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+form input,
+form textarea,
+.search {
+  width: 100%;
+  padding: 12px 13px;
+  color: #24263b;
+  background: #fafaff;
+  border: 1px solid #e4e5ef;
+  border-radius: 10px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+form input:focus,
+form textarea:focus,
+.search:focus {
+  border-color: #7968e8;
+  box-shadow: 0 0 0 3px #7968e81a;
+}
+
+form textarea {
+  resize: vertical;
+}
+
+.add-button {
+  margin-top: 12px;
+  padding: 14px;
+  color: white;
+  background: #6554dc;
+  border: 0;
+  border-radius: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.add-button:hover {
+  background: #5142c5;
+  transform: translateY(-1px);
+}
+
+.contacts-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.contacts-heading .muted {
+  margin-bottom: 0;
+}
+
+.search {
+  margin-bottom: 22px;
+  background: #f8f8fd;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.contact-card {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid #e8e8f1;
+  border-radius: 16px;
+  background: linear-gradient(160deg, #fff, #faf9ff);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px #29234d0d;
+}
+
+.avatar {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  color: #5d4cd0;
+  background: #eae6ff;
+  border-radius: 16px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.contact-card h3 {
+  margin: 16px 0 5px;
+  overflow-wrap: anywhere;
+  font-family: 'Manrope', sans-serif;
+  font-size: 17px;
+}
+
+.job,
+.company {
+  margin: 4px 0;
+  color: #7160df;
+  font-size: 13px;
+}
+
+.company {
+  color: #76798d;
+}
+
+.detail {
+  margin: 12px 0 0;
+  color: #5e6279;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.bio {
+  padding-top: 10px;
+  color: #777b91;
+  border-top: 1px solid #ececf4;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.empty {
+  grid-column: 1 / -1;
+  padding: 45px 15px;
+  text-align: center;
+  color: #888ba0;
+}
+
+.empty > div {
+  font-size: 42px;
+}
+
+.empty h3 {
+  color: #34364b;
+}
+
+.empty p {
+  font-size: 13px;
+}
+
+footer {
+  padding: 35px 0 12px;
+  color: #9294a6;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media (max-width: 950px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .form-panel {
+    max-width: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 18px 15px;
+  }
+
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .hero {
+    margin: 25px 0;
+    padding: 28px 22px;
+  }
+
+  .hero-icon {
+    padding: 12px;
+    border-radius: 17px;
+  }
+
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+
+  .form-panel,
+  .contacts-panel {
+    padding: 20px 16px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.delete-button {
+  margin-top: 15px;
+  padding: 9px 12px;
+  color: #d93651;
+  background: #fff0f2;
+  border: 1px solid #ffd5dc;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.delete-button:hover {
+  background: #ffe1e6;
+}
